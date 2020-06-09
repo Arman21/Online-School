@@ -1,0 +1,586 @@
+<div id="container" class="container-fluid wrapper">
+    <h1 class="title">It-School</h1>
+    <div class="search_content">
+        <div class="main_container">
+            <button class="searchButton" title="Search">
+                <a [href]="searchLesson" class="no_line" (click)="toClear()">
+                    <i class="fa fa-search searchIcon"></i>
+                </a>
+            </button>
+            <form method="" class="form1">
+                <input type="search" class="search_for" placeholder="Search for lesson..." name="search-input" 
+                [(ngModel)]="searchText" (click)="openListContainer()" (input)="writeText()">
+            </form>
+        </div>
+        <ul *ngIf="isTrue" class="list-group list-group-flush list_container">
+            <li *ngFor="let item of storage.searchArray[0]" class="list-group-item text-dark lessons_list"
+            (click)="giveValue(listSearch)" #listSearch>
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+    <div id="content" class="row content">
+        <div class="col-lg">
+            <div class="card mainBlock">
+                <img src="../../../assets/Images/angular-logo.png" alt="angular" class="card-img-top img_logo"
+                title="Angular" data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body bg-danger">
+                    <a href="https://angular.io/" target="_blank" class="no_line">
+                        <h5 id="angular" class="card-title text-white blockTitle" title="click for Angular info">
+                        ANGULAR</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        Angular is a TypeScript-based open-source web application framework led by the Angular Team at 
+                        Google and by a community of individuals and corporations. Angular is a complete rewrite from 
+                        the same team that built AngularJS.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-danger">1.Angular & Angular-CLI(+npm)</li>
+                    <li class="list-group-item text-danger">2.Angular app structure & Angular Ecosystem</li>
+                    <li class="list-group-item text-danger">3.Difference between Angular & AngularJS,
+                    Shadow DOM,Virtual DOM,introduction to Angular 9</li>
+                    <li class="list-group-item text-danger">4.Basics of TypeScript language</li>
+                    <li class="list-group-item text-danger">5.Modules & Components</li>
+                    <li class="list-group-item text-danger">6.Interpolation & Data Bindings</li>
+                    <li class="list-group-item text-danger">7.JS events in Angular</li>
+                    <li class="list-group-item text-danger">8.What is ngModule</li>
+                    <li class="list-group-item text-danger">9.FormsModule & ngModel,BrowserModule</li>
+                    <li class="list-group-item text-danger">10.@Input & @Output decorators & Services</li>
+                    <li class="list-group-item text-danger">11.Content projection(ng-content)</li>
+                    <li class="list-group-item text-danger">12.ViewChild/ContentChild</li>
+                    <li class="list-group-item text-danger">13.Directives(ngIf,ngClass,ngFor,ngStyle,ngSwitch,...)</li>
+                    <li class="list-group-item text-danger">14.Custom directives</li>
+                    <li class="list-group-item text-danger">15.Pipes.Impure pipes</li>
+                    <li class="list-group-item text-danger">16.EXAM!-1.</li>
+                    <li class="list-group-item text-danger">17.Creating dynamic components</li>
+                    <li class="list-group-item text-danger">18.Angular Lifecycles</li>
+                    <li class="list-group-item text-danger">19.ViewRef/TemplateRef</li>
+                    <li class="list-group-item text-danger">20.Angular routing</li>
+                    <li class="list-group-item text-danger">21.Lazy loading</li>
+                    <li class="list-group-item text-danger">22.HTTPClient</li>
+                    <li class="list-group-item text-danger">23.Work with template-driven forms</li>
+                    <li class="list-group-item text-danger">24.Work with reactive forms</li>
+                    <li class="list-group-item text-danger">25.FormControl,FormGroup,FormArray</li>
+                    <li class="list-group-item text-danger">26.Forms validation</li>
+                    <li class="list-group-item text-danger">27.Design Patterns</li>
+                    <li class="list-group-item text-danger">28.Introduction to RxJS</li>
+                    <li class="list-group-item text-danger">29.NgRx platform and its modules</li>
+                    <li class="list-group-item text-danger">30.Working on real project</li>
+                    <li class="list-group-item text-danger">31.EXAM!-2.</li>
+                </ul>
+                <div class="show_hide">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconFirst)" #dynamicIconFirst></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconFirst2)" #dynamicIconFirst2></i>
+                </div>
+                <div class="card-body bg-danger footer">
+                    <a href="" class="card-link text_white register_link" title="Click for register!"
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card mainBlock block2">
+                <img src="../../../assets/Images/react-logo.png" alt="react/redux" class="card-img-top img_logo2" 
+                title="React/Redux" data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body bg-info">
+                    <a href="https://reactjs.org/" target="_blank" class="no_line">
+                        <h5 id="react.js" class="card-title text-white blockTitle" title="click for React/Redux info">
+                        REACT/REDUX</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        React is a JavaScript library for building user interfaces. It is maintained by Facebook 
+                        and a community of individual developers and companies. React can be used as a base in the
+                        development of single-page or mobile applications.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-info">1.ES2015 essential basics,Introduction to React</li>
+                    <li class="list-group-item text-info">2.Components-based architecture React elements 
+                    and Components</li>
+                    <li class="list-group-item text-info">3.Virtual DOM,Communication between Components
+                    (Props,Refs)</li>
+                    <li class="list-group-item text-info">4.Components’ state,handling data changes with 
+                    state</li>
+                    <li class="list-group-item text-info">5.Synthetic events</li>
+                    <li class="list-group-item text-info">6.React Lifecycle methods</li>
+                    <li class="list-group-item text-info">7.Talking to Remote Servers directly from React</li>
+                    <li class="list-group-item text-info">8.Introduction to tools that used with React
+                    (npm/yarn,webpack)</li>
+                    <li class="list-group-item text-info">9.Introduction to Redux,Store</li>
+                    <li class="list-group-item text-info">10.Actions and Action Creators</li>
+                    <li class="list-group-item text-info">11.Reducers,(middleware) and Store Manipulations</li>
+                    <li class="list-group-item text-info">12.Talking with remote servers with usage of Redux,
+                    global data flow</li>
+                    <li class="list-group-item text-info">13.EXAM!-1.</li>
+                    <li class="list-group-item text-info">14.Introduction to state management.Introducing 
+                    to Redux</li>
+                    <li class="list-group-item text-info">15.Actions and Action creators in Redux</li>
+                    <li class="list-group-item text-info">16.Reducers.Handling Actions</li>
+                    <li class="list-group-item text-info">17.Handling more Actions and splitting Reducers</li>
+                    <li class="list-group-item text-info">18.Introduction to store.Why we need store?</li>
+                    <li class="list-group-item text-info">19.App data flow with Redux</li>
+                    <li class="list-group-item text-info">20.Usage with React</li>
+                    <li class="list-group-item text-info">21.Adding Redux to the Project</li>
+                    <li class="list-group-item text-info">22.Working on real project</li>
+                    <li class="list-group-item text-info">23.EXAM!-2.</li>
+                </ul>
+                <div class="show_hide show_hide2">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconSecond)" #dynamicIconSecond></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconSecond2)" #dynamicIconSecond2></i>
+                </div>
+                <div class="card-body bg-info footer">
+                    <a href="#" class="card-link text_white register_link" title="Click for register!"
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row content content2">
+        <div class="col-lg">
+            <div class="card mainBlock">
+                <img src="../../../assets/Images/node-logo.png" alt="node.js" class="card-img-top img_logo2 img_logo3"
+                title="Node" data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body success">
+                    <a href="https://nodejs.org/en/about/" target="_blank" class="no_line" title="Node">
+                        <h5 id="node.js" class="card-title text-white blockTitle" title="click for Node info"
+                        >NODE.js</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        Node.js is an open-source, cross-platform, JavaScript runtime environment that 
+                        executes JavaScript code outside of a browser.JavaScript is the only language
+                        that Node.js supports natively, but many compile-to-JS languages are available.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-success">1.Installation of Environment(Code Editor,Node.js,
+                    Postman,NVM and NPM)</li>
+                    <li class="list-group-item text-success">2.How the Web works,client-server,requests and responses,
+                    JSON data</li>
+                    <li class="list-group-item text-success">3.What is Node.js,JavaScript in Node.js,EventLoop in 
+                    Node.js, Creating Node Server</li>
+                    <li class="list-group-item text-success">4.Global Object,Node Modules,Path,OS,FS,Events,NPM, 
+                    Package.json,Nodemon</li>
+                    <li class="list-group-item text-success">5.Express framework /pаrt 1/ - Creating a web server,
+                    GET,POST,PUT and DELETE methods,Input Validation</li>
+                    <li class="list-group-item text-success">6.Express framework /pаrt 2/ - Middleware,Configuration,
+                    Express Application</li>
+                    <li class="list-group-item text-success">7.Express framework p3 - Parsing Incoming Requests,
+                    Using Express Router,Filtering Paths</li>
+                    <li class="list-group-item text-success">8.Async JavaScript - Callbacks,Promises and Async/Await 
+                    keywords</li>
+                    <li class="list-group-item text-success">10.MongoDB and Mongoose,Connect with DB to control Data</li>
+                    <li class="list-group-item text-success">11.MVC - Main Concepts, Models and Routes - Connection 
+                    between them</li>
+                    <li class="list-group-item text-success">12.Sessions and Cookies,Configuring Cookies, 
+                    Using MongoDB to Store Sessions</li>
+                    <li class="list-group-item text-success">13.Authentication and Authorization for Express 
+                    application</li>
+                    <li class="list-group-item text-success">14.Sending emails,nodemailer,SendMail and 
+                    verification</li>
+                    <li class="list-group-item text-success">15.EXAM!-1.</li>
+                    <li class="list-group-item text-success">16.RESTful API (start) - Creating Server and Handling 
+                    Requests</li>
+                    <li class="list-group-item text-success">17.Creating Routes(Test via Postman),
+                    Creating Models for REST API</li>
+                    <li class="list-group-item text-success">18.Error handling and logging,try/catch 
+                    keywords</li>
+                    <li class="list-group-item text-success">19.Parsing the Body (body-parser),Handling CORS</li>
+                    <li class="list-group-item text-success">20.DataBase - Comparison SQL vs NoSQL - main 
+                    difference</li>
+                    <li class="list-group-item text-success">21.Mongoose - Data Validation,Managing Orders 
+                    with Mongoose</li>
+                    <li class="list-group-item text-success">22.Mongoose - Relationship between connected 
+                    data,Object ID</li>
+                    <li class="list-group-item text-success">23.File Uploading in Node.js,Image uploading</li>
+                    <li class="list-group-item text-success">24.Authentication and Authorization for REST API</li>
+                    <li class="list-group-item text-success">25.Controllers,RESTful API</li>
+                    <li class="list-group-item text-success">26.EXAM!-2.</li>
+                    <li class="list-group-item text-success">27.Application Security Basics</li>
+                    <li class="list-group-item text-success">28.What is Transpiling,Babel/Webpack,BackEnd Setup
+                    Configuration</li>
+                    <li class="list-group-item text-success">29.Introduction to Passport.js,Role Based 
+                    Authorization</li>
+                    <li class="list-group-item text-success">30.User Login System Application /part 1/</li>
+                    <li class="list-group-item text-success">31.User Login System Application /part 2/</li>
+                    <li class="list-group-item text-success">32.User Login System Application /part 3/</li>
+                    <li class="list-group-item text-success">33.WebSockets,ws,Socket.io</li>
+                    <li class="list-group-item text-success">34.Setting Up Socket.io on the Server</li>
+                    <li class="list-group-item text-success">35.Stream,ReadStream/WriteStream</li>
+                    <li class="list-group-item text-success">36.Streaming to the browser,range requests</li>
+                    <li class="list-group-item text-success">37.Creating of Chat Application - /part 1/</li>
+                    <li class="list-group-item text-success">38.Creating of Chat Application - /part 2/</li>
+                    <li class="list-group-item text-success">39.Course Roundup</li>
+                    <li class="list-group-item text-success">40.EXAM!-3.</li>
+                </ul>
+                <div class="show_hide show_hide3">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconThird)" #dynamicIconThird></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconThird2)" #dynamicIconThird2></i>
+                </div>
+                <div class="card-body success footer">
+                    <a href="" class="card-link text_white register_link node_link" title="Click for register!"
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card mainBlock block2">
+                <img src="../../../assets/Images/python-logo.png" alt="python" class="card-img-top img_logo2
+                img_logo3" title="Python" data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body bg-warning">
+                    <a href="https://www.python.org/" target="_blank" class="no_line">
+                        <h5 id="python" class="card-title text-white blockTitle" title="click for Python info">
+                        PYTHON</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        Python is an interpreted,high-level,general-purpose programming language.
+                        Created by Guido van Rossum and first released in 1991.Its language constructs
+                        and object-oriented approach aim to help programmers write clear,logical code
+                        for small and large-scale projects.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-primary">1.Why Programming and Setup / Jupyter Notebook, 
+                    Notepad++,“Hello World!”,Numbers /</li>
+                    <li class="list-group-item text-primary">2.Variables,expressions,and statements / Types,Operators,
+                    Modulus /</li>
+                    <li class="list-group-item text-primary">3.Closures and Decorators / Function Factory,
+                    Nonlocal and Global,Decorators/</li>
+                    <li class="list-group-item text-primary">4.Classes (Advanced) / Inheritance,Dunder methods,Class
+                    Attributes,Static Methods,Class Methods /</li>
+                    <li class="list-group-item text-primary">5.Exceptions and Errors / Exception Hierarchy,
+                    Defining Exceptions,TraceBack,Assertion /</li>
+                    <li class="list-group-item text-primary">6.Context Managers / Defining,Importing contextlib /</li>
+                    <li class="list-group-item text-primary">7.SQLite (database) / Creating Tables,Accessing 
+                    and Filtering / /</li>
+                    <li class="list-group-item text-primary">8.Iterables and Iteration / Map,Filter,Zip,
+                    Functools.reduce, Generators /</li>
+                    <li class="list-group-item text-primary">9.Concurrency (parallelism) / Multi-Threading,
+                    Multi-Processing,Multi-Processing /</li>
+                    <li class="list-group-item text-primary">10.Unit-testing / Assertions,Test driven development /</li>
+                    <li class="list-group-item text-primary">11.Virtual Environments / Separation of Packages,
+                    Creating requirements /</li>
+                    <li class="list-group-item text-primary">12.Version Control (GIT) / Setup,Branching and Fork,
+                    Merge,Pull and Push /</li>
+                    <li class="list-group-item text-warning">13.EXAM!-1.</li>
+                    <li class="list-group-item text-primary">14.Classes (Basics) / Methods,Instances,Initializer,
+                    Collaborating Classes,Polymorphism /</li>
+                    <li class="list-group-item text-primary">15.Packages / Imports from sys.path,Sub-packaging,
+                    Relative imports /</li>
+                    <li class="list-group-item text-primary">16.Closures and Decorators / Function Factory,Nonlocal
+                    and Global,Decorators/</li>
+                    <li class="list-group-item text-primary">17.Classes (Advanced) / Inheritance,Dunder methods,
+                    Class Attributes,Static Methods,Class Methods /</li>
+                    <li class="list-group-item text-primary">18.Exceptions and Errors / Exception Hierarchy,
+                    Defining Exceptions,TraceBack,Assertion /</li>
+                    <li class="list-group-item text-primary">19.Context Managers / Defining,Importing contextlib /</li>
+                    <li class="list-group-item text-primary">20.SQLite (database) / Creating Tables,Accessing 
+                    and Filtering / /</li>
+                    <li class="list-group-item text-primary">21.Iterables and Iteration / Map,Filter,Zip,
+                    Functools.reduce,Generators /</li>
+                    <li class="list-group-item text-primary">22.Concurrency (parallelism) / Multi-Threading,
+                    Multi-Processing,Multi-Processing /</li>
+                    <li class="list-group-item text-primary">23.Unit-testing / Assertions,Test driven development /</li>
+                    <li class="list-group-item text-primary">24.Virtual Environments / Separation of Packages,
+                    Creating requirements /</li>
+                    <li class="list-group-item text-primary">25.Version Control (GIT) / Setup,Branching and Fork,
+                    Merge,Pull and Push /</li>
+                    <li class="list-group-item text-warning">26.EXAM!-2.</li>
+                    <li class="list-group-item text-primary">27.Overview of Front-End / HTML,CSS,Bootstrap /</li>
+                    <li class="list-group-item text-primary">28.JavaScript / Document Object Model,JQuery /</li>
+                    <li class="list-group-item text-primary">29.Creating Django Project / Virtual Environment,
+                    Structure of Django files,Creating first App /</li>
+                    <li class="list-group-item text-primary">30.Models / Migrating,Model API /</li>
+                    <li class="list-group-item text-primary">31.Templates and Static Files / Views,Template Engine,
+                    Static Files Setup /</li>
+                    <li class="list-group-item text-primary">32.URLs and Forms / URLs API,Reusable Templates,
+                    Reusable Forms /</li>
+                    <li class="list-group-item text-primary">33.User Authentication / Sign-up,Log-in,Custom template
+                    tags, Password rest and change,Filters /</li>
+                    <li class="list-group-item text-primary">34.Unit-Testing / Testing views,Testing views,
+                    Testing Sign-up /</li>
+                    <li class="list-group-item text-primary">35.Protecting Views / Managing Redirects,Login 
+                    required test,Accessing Authenticated User /</li>
+                    <li class="list-group-item text-primary">36.Querysets / Migrations,Account View,Markdown,
+                    Humanize/</li>
+                    <li class="list-group-item text-primary">37.Advanced Topics / Class Based Views (CBV),Detail
+                    and List Views,CRUD views,Pagination /</li>
+                    <li class="list-group-item text-primary">38.Deployment / Setting Github,Deploying on Heroku or
+                    Python Everywhere /</li>
+                    <li class="list-group-item text-warning">39.EXAM!-3.</li>
+                </ul>
+                <div class="show_hide show_hide4" title="Click for watching">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconFourth)" #dynamicIconFourth></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconFourth2)" #dynamicIconFourth2></i>
+                </div>
+                <div class="card-body bg-warning footer">
+                    <a href="" class="card-link text_white register_link" title="Click for register!" 
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="row content">
+        <div class="col-lg">
+            <div class="card mainBlock">
+                <img src="../../../assets/Images/vue-logo.png" alt="vue" class="card-img-top img_logo" title="Vue.js"
+                data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body" style="background-color:rgb(79,192,141);">
+                    <a href="https://vuejs.org/" target="_blank" class="no_line">
+                        <h5 id="vue.js" class="card-title text-white blockTitle" title="click for Vue.js info">
+                        VUE.js</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        Vue.js is an open-source Model–view–viewmodel JavaScript framework for building user
+                        interfaces and single-page applications.It was created by Evan You.Vue is a progressive
+                        framework.Unlike other monolithic frameworks,Vue is designed from the ground up to be
+                        incrementally adoptable.
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-success">1.Declarative Rendering</li>
+                    <li class="list-group-item text-success">2.Conditionals and Loops</li>
+                    <li class="list-group-item text-success">3.Handling User Input</li>
+                    <li class="list-group-item text-success">4.Composing with Components</li>
+                    <li class="list-group-item text-success">5.Relation to Custom Elements</li>
+                    <li class="list-group-item text-success">6.Computed Properties and Watchers</li>
+                    <li class="list-group-item text-success">7.Class and Style Bindings</li>
+                    <li class="list-group-item text-success">8.Conditional Rendering</li>
+                    <li class="list-group-item text-success">9.List Rendering</li>
+                    <li class="list-group-item text-success">10.Event Handling</li>
+                    <li class="list-group-item text-success">11.Form Input Bindings</li>
+                    <li class="list-group-item text-success">12.Components Basics</li>
+                    <li class="list-group-item text-success">13.Component Registration</li>
+                    <li class="list-group-item text-success">14.Props</li>
+                    <li class="list-group-item text-success">15.Custom Events</li>
+                    <li class="list-group-item text-success">16.Slots</li>
+                    <li class="list-group-item text-success">17.Dynamic & Async Components</li>
+                    <li class="list-group-item text-success">18.Handling Edge Cases</li>
+                    <li class="list-group-item text-success">19.EXAM!-1.</li>
+                    <li class="list-group-item text-success">20.Mixins</li>
+                    <li class="list-group-item text-success">21.Custom Directives</li>
+                    <li class="list-group-item text-success">22.Render Functions & JSX</li>
+                    <li class="list-group-item text-success">23.Plugins</li>
+                    <li class="list-group-item text-success">24.Filters</li>
+                    <li class="list-group-item text-success">25.Single File Components</li>
+                    <li class="list-group-item text-success">26.Unit Testing</li>
+                    <li class="list-group-item text-success">27.TypeScript Support</li>
+                    <li class="list-group-item text-success">28.Production Deployment</li>
+                    <li class="list-group-item text-success">29.Routing</li>
+                    <li class="list-group-item text-success">30.State Management</li>
+                    <li class="list-group-item text-success">31.Server-Side Rendering</li>
+                    <li class="list-group-item text-success">32.Security</li>
+                    <li class="list-group-item text-success">33.Reactivity in Depth</li>
+                    <li class="list-group-item text-success">34.EXAM!-2.</li>
+                </ul>
+                <div class="show_hide show_hide5">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconFifth)" #dynamicIconFifth></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconFifth2)" #dynamicIconFifth2></i>
+                </div>
+                <div class="card-body footer" style="background-color:rgb(79,192,141);">
+                    <a href="" class="card-link text_white register_link" title="Click for register!"
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <div class="card mainBlock block2">
+                <img src="../../../assets/Images/java-logo.jpg" alt="java" class="card-img-top img_logo4" 
+                title="Java" data-toggle="modal" data-target="#exampleModal2" (click)="showModalPic($event)">
+                <div class="card-body" style="background-color:rgb(83,130,161);">
+                    <a href="https://www.oracle.com/java/" target="_blank" class="no_line">
+                        <h5 id="java" class="card-title text-white blockTitle" title="click for Java info">
+                        JAVA</h5>
+                    </a>
+                    <p class="card-text text-white info_block">
+                        Java is a general-purpose programming language that is class-based,object-oriented,and
+                        designed to have as few implementation dependencies as possible.It is intended to let
+                        application developers write once,run anywhere (WORA).
+                </div>
+                <ul class="list-group list-group-flush listBlock">
+                    <li class="list-group-item text-danger">1.Introduction to Java,primitive variables,
+                    binary system</li>
+                    <li class="list-group-item text-danger">2.Logical and conditional operators</li>
+                    <li class="list-group-item text-danger">3.Cyclic operators (for,while,do while),endless
+                    cycle and its application</li>
+                    <li class="list-group-item text-danger">4.One-dimensional array,possible options for use:
+                    for-each cycle</li>
+                    <li class="list-group-item text-danger">5.Two-dimensional arrays (Matrix)</li>
+                    <li class="list-group-item text-danger">6.Multidimensional arrays,examples of multidimensional 
+                    arrays</li>
+                    <li class="list-group-item text-danger">7.String,introduction to String methods</li>
+                    <li class="list-group-item text-danger">8.StringBuilder,StringBuffer StringTokenizer,StringJoiner,
+                    String pool</li>
+                    <li class="list-group-item text-danger">9.Compiler,JIT,JVM,JDK,Final Constants,Introduction to
+                    Debugger,Immutable and mutable classes</li>
+                    <li class="list-group-item text-danger">10.Returns,non-return methods</li>
+                    <li class="list-group-item text-danger">11.Recursion.Varargs:</li>
+                    <li class="list-group-item text-danger">12.File I / O Stream,New I / O,Garbage Collector</li>
+                    <li class="list-group-item text-danger">13.EXAM!-1.</li>
+                    <li class="list-group-item text-danger">14.Data Structure</li>
+                    <li class="list-group-item text-danger">15.Introduction to Classes and Objects,Heap and Stack 
+                    in Memory,Introduction to Constructor,and its Role in Object Creation</li>
+                    <li class="list-group-item text-danger">16.Overloaded constructors,overloaded methods,static blocks,
+                    static methods,difference between static and virtual methods,mass of objects</li>
+                    <li class="list-group-item text-danger">17.Inheritance,constructor behavior during
+                    inheritance</li>
+                    <li class="list-group-item text-danger">18.Packages,Interfaces and Functional Interfaces,
+                    Multidimensional Interface,Abstract Methods,Encapsulation:Lambda Written</li>
+                    <li class="list-group-item text-danger">19.Polymorphism,polymorph methods,abstraction,
+                    abstract classes</li>
+                    <li class="list-group-item text-danger">20.Java Reflections API,getclass () method in 
+                    reflection</li>
+                    <li class="list-group-item text-danger">21.Generics,generics in classes and methods</li>
+                    <li class="list-group-item text-danger">22.JCF,Data Structure in the Collection</li>
+                    <li class="list-group-item text-danger">23.Enum,Threads and Their Importance in Programming.Thread
+                    class,Runnable interface</li>
+                    <li class="list-group-item text-danger">24.MultiThreading,synchronized methods,volatile,
+                    transient variables,Thread class,Runnable interface</li>
+                    <li class="list-group-item text-danger">25.EXAM!-2.</li>
+                    <li class="list-group-item text-danger">26.Browse databases:SQL,MySQL,JDBC</li>
+                    <li class="list-group-item text-danger">27.DDL and DML commands,SQL joins</li>
+                    <li class="list-group-item text-danger">28.One-to-one,one-to-many relationships,foreign keys</li>
+                    <li class="list-group-item text-danger">29.Construction of automation tools.Introduction to
+                     Maven and Gradle</li>
+                    <li class="list-group-item text-danger">30.HTTP protocol.Introducing servlet.Tomcat</li>
+                    <li class="list-group-item text-danger">31.ServletContext,ServletConfig</li>
+                    <li class="list-group-item text-danger">32.HttpServletRequest,HttpServletResponse</li>
+                    <li class="list-group-item text-danger">33.Inheritance methods by Class and prototype</li>
+                    <li class="list-group-item text-danger">34.JSP,JSP lifecycle.JSP and Servlet</li>
+                    <li class="list-group-item text-danger">35.JSP actions,form processing:</li>
+                    <li class="list-group-item text-danger">36.Writing filters</li>
+                    <li class="list-group-item text-danger">37.Cookies,session</li>
+                    <li class="list-group-item text-danger">38.EXAM!-3.</li>
+                    <li class="list-group-item text-danger">39.How to Create a Spring Application 
+                    Using(Maven and Gradle) Tools</li>
+                    <li class="list-group-item text-danger">40.Dependency Injection design pattern and 
+                    its types(Part 1)</li>
+                    <li class="list-group-item text-danger">41.DI connection with Spring Framework(part 2)</li>
+                    <li class="list-group-item text-danger">42.Introduction to Bean lifecycle,BeanPostProcessor
+                    interface</li>
+                    <li class="list-group-item text-danger">43.Bean Scope,@Profile,@Contitional annotations</li>
+                    <li class="list-group-item text-danger">44.Bean runtime registry, runtime data
+                    integration</li>
+                    <li class="list-group-item text-danger">45.Aspect-Oriented Programming(AOP)
+                    (Part-1)</li>
+                    <li class="list-group-item text-danger">46.Aspect-Oriented Programming(AOP)
+                    (Part-2)</li>
+                    <li class="list-group-item text-danger">47.Spring Expression Language(SPEL)</li>
+                    <li class="list-group-item text-danger">48.Integration of Unit Tests with Spring,
+                    Mockito framework</li>
+                    <li class="list-group-item text-danger">49.Organizing integration tests in 
+                    Spring</li>
+                    <li class="list-group-item text-danger" style="text-decoration:underline;">
+                    50.FINALL EXAM!-4.</li>
+                </ul>
+                <div class="show_hide show_hide6">
+                    <p class="course_text">Topics in this course.</p>
+                    <i class="fa fa-angle-down icon iconDown"
+                    (click)="showHideInfo(dynamicIconSixth)" #dynamicIconSixth></i>
+                    <i class="fa fa-angle-up icon iconUp"
+                    (click)="hideShowInfo(dynamicIconSixth2)" #dynamicIconSixth2></i>
+                </div>
+                <div class="card-body footer" style="background-color:rgb(83,130,161);">
+                    <a href="" class="card-link text_white register_link" title="Click for register!"
+                    data-toggle="modal">Enroll in classes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_div">
+        <p class="last_text">
+            Having been in the market for over 5 years and operating effectively, our company has been able to gain
+            the trust of its target audience by receiving a large number of positive feedback from our students.
+            Since its inception, we have been trying to bring in a skilled and well-equipped labor market with 
+            the help of a professional and knowledgeable team. This is evidenced by the success of our graduates
+            in high-ranking IT companies in Armenia and abroad.Currently we have over 200 students studying
+            various programming environments. We work with constantly updated teaching methods and provide not 
+            only theoretical but also practical training, which is a key precondition for a competitive job market.
+        </p>
+        <p class="build_text text-primary">This web-application is created with Angular by It-School team!</p>
+    </div>
+    <i class="fa fa-angle-up iconDirect" title="Go to top" (click)="toScroll()"></i>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" 
+aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal_div"
+        style="border-top-left-radius:21px;border-top-right-radius:21px;border-bottom-left-radius:21px;
+        border-bottom-right-radius:21px;">
+            <div class="modal-header" style="border-top-left-radius:20px;border-top-right-radius:20px;"
+            [style.background-color]="colorTheme">
+                <h5 class="modal-title" id="exampleModalCenterTitle"
+                style="text-decoration:underline;color:#fff;margin-left:36%;" #urlTitle>
+                    {{ modalTitle }}
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <a [routerLink]="['/cancel-page']" style="text-decoration:none;">
+                        <span aria-hidden="true" style="color:#fff;" title="To close">&times;</span>
+                    </a>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align:center;" [style.color]="modalTextColor">
+                {{ modalWarning }}</div>
+            <div class="modal-footer" style="border-bottom-left-radius:20px;border-bottom-right-radius:20px;"
+            [style.background-color]="colorTheme">
+                <div class="router">
+                    <div class="router_link1">
+                        <a [routerLink]="['/cancel-page']">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </a>   
+                    </div> 
+                    <div class="router_link2">         
+                        <a [routerLink]="['/sign-up-page',storage.title]" [routerLinkActive]="['activeLink']">
+                            <button type="button" class="btn" data-dismiss="modal" 
+                            style="color:#fff;background-color:#BA55D3;" 
+                            (mouseover)="showStyles(modal)" (mouseout)="hideStyles(modal)"
+                            (click)="showSignUpPage(urlTitle)" #modal>
+                            To apply for lessons</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" 
+aria-hidden="true">
+    <div class="modal-dialog dialog_info" role="document">
+        <div class="alert alert-dismissible fade show" role="alert"  [style.background-color]="modalBgColor">
+            Հարգելի դիմորդ,դուք արդեն գրանցված եք դասընթացի համար:
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button> 
+        </div> 
+    </div>         
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width:100%;height:100%;">
+        <div class="modal-content modal_content" style="width:110%;height:80%;margin-top:12%;">
+            <button type="button" class="close modal_button" data-dismiss="modal" aria-label="Close" title="To close">
+                <span class="modal_remove" aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal_container">
+                <img alt="logo-pic" id="modalImg" class="modal_img" title="Title-Image">
+            <div>
+        </div>
+    </div>
+</div>
+
+

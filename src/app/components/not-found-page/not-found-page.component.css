@@ -1,0 +1,13 @@
+.warning {
+    color:rgb(235, 243, 240);
+    font-family:sans-serif;
+    cursor:pointer;
+    text-align:center;
+    margin-top:80px;
+    font-weight:600;
+}
+.line {
+    border-top:1px solid rgb(235, 243, 240);
+    margin-top:40px;
+    width:100%;
+}

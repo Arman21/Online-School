@@ -1,0 +1,78 @@
+.mainBlock {
+    position:absolute;
+    top:10%;
+    left:30%;
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    border-bottom:2px solid #fff;
+    animation-name:animation3;
+    animation-delay:0;
+    animation-duration:0.8s;
+}
+@keyframes animation3 {
+    from {transform:scale(0.1);}
+    to {transform:scale(1)}
+}
+.dates {
+    width:100%;
+    margin-bottom:40px;
+    margin-left:0;
+    text-indent:22px;
+    color:#000;
+    font-size:26px;
+    padding:5px 0;
+    border:5px solid rgb(180,177,177);
+    border-radius:30px;
+    transition:all 0.7s ease;
+}
+.dateButton {
+    margin-bottom:50px;
+    margin-left:37.5%;
+    padding:11px 14px;
+    border:5px solid rgb(14,199,231);
+    background-color:rgb(59,167,68);
+    border-radius:18px;
+    color:#fff;
+    text-align:center;
+    font-size:19px;
+}
+.dateButton:hover {
+    background-color:rgb(14,199,231);
+    text-decoration:underline;
+}
+.dateButton:active {
+    border:5px solid rgb(59,167,68);
+    text-decoration:underline;
+    color:#000;
+}
+.form_text {
+    color:#fff;
+    text-align:center;
+    margin:-30px 0 50px;
+    font-size:20px;
+}
+.dialog_info {
+    margin-top:25% !important;
+    text-align:center;
+    width:60%;
+    margin-left:20%;
+}
+@media screen and (max-width:850px) {
+    .mainBlock {
+        width:80%;
+        left:10%;
+    }
+}
+@media screen and (max-width:500px) {
+    .mainBlock {
+        width:100%;
+        left:0;
+    }
+}
+@media screen and (max-width:400px) {
+    .dates {
+        font-size:19px;
+        padding:12px 0;
+    }
+}

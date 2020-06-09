@@ -1,0 +1,15 @@
+.alert_text {
+    background-color:rgba(204,229,255,0.6);
+    width:70%;
+    position:absolute;
+    left:15%;
+    top:35%;
+    border-radius:20px;
+    cursor:pointer;
+}
+@media screen and (max-width:768px) {
+    .alert_text {
+        top:23%;
+        left:15%;
+    }
+}

@@ -1,0 +1,44 @@
+<div *ngIf="storage.hiddenAlert" class="alert alert-light alert-dismissible fade show dialog_info" role="alert">
+    Հարգելի դիմորդ,դուք ունեք սխալ կամ թերի լրացված տվյալ(ներ),փորձեք կրկին:
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+    style="cursor:pointer;" title="To go back">
+        <a [routerLink]="['/sign-up-page',storage.newTitle]" style="color:#1895c7;text-decoration:none;">
+            <span aria-hidden="true">&times;</span>
+        </a>
+    </button> 
+</div> 
+<div *ngIf="storage.hiddenAlert2" class="alert alert-primary alert-dismissible fade show dialog_info" role="alert">
+    Հարգելի դիմորդ,դուք գրանցված եք տվյալ դասընթացին:
+    <button type="button" [routerLink]="['/home-page']" class="router_link close" data-dismiss="alert" 
+    aria-label="Close" style="cursor:pointer;" title="To close">
+        <span aria-hidden="true" style="color:#2b9ca0;text-decoration:none;">&times;</span>
+    </button> 
+</div>
+<div *ngIf="userInfo" class="boolean_block">
+    <div *ngFor="let item of storage.lessonsArray ; let i = index" class="mainBlock">
+        <img [src]="item.lessonLogo" alt="lesson_logo" class="_logo" title="Lesson">
+        <p id="text" class="text_style" [style.background-color]="bgColor" style="text-decoration:underline;">
+            COURSE : {{ item.title }}
+        </p>
+        <p class="text_style" [style.background-color]="bgColor" style="text-decoration:underline;">APPLICATOR</p>
+        <p class="text_style" [style.background-color]="bgColor">Name : {{ item.name }}</p>
+        <p class="text_style" [style.background-color]="bgColor">Surname : {{ item.surname }}</p>
+        <p class="text_style" [style.background-color]="bgColor">Age : {{ item.age }}</p>
+        <p class="text_style" [style.background-color]="bgColor" style="text-decoration:underline;">YOUR CONTACTS</p>
+        <p class="text_style" [style.background-color]="bgColor">Mobile-number : {{ item.mobile }}</p>
+        <p class="text_style" [style.background-color]="bgColor">Email : {{ item.email }}</p>
+        <p class="text_style" [style.background-color]="bgColor" style="text-decoration:underline;">INFO</p>
+        <p class="text_style" [style.background-color]="bgColor">Ուսանողների առավելագույն քանակը խմբում - 7</p>
+        <p class="text_style" [style.background-color]="bgColor">Դիմորդների ներկայիս քանակը - {{ counter+1 }}</p>
+        <p class="text_style" [style.background-color]="bgColor">{{ item.info }}</p>
+        <p class="text_style" [style.background-color]="bgColor">Դասընթացավար : {{ item.teacher }}</p>
+        <p class="text_style" [style.background-color]="bgColor">Դասընթացը կմեկնարկվի ՝</p>
+        <p class="text_style lessonTime" [style.color]="dateColor">{{ time }}</p>
+        <a [routerLink]="['/home-page']" class="router_link">
+            <button type="button" class="clickable" title="Click!" [style.background-color]="buttonColor">
+                Back to home page
+            </button>
+        </a>
+    </div>
+</div>
+<i class="fa fa-angle-up iconDirect" title="Go to top" (click)="toScroll()"></i>

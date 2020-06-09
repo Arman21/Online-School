@@ -1,0 +1,28 @@
+<div class="mainBlock">
+    <p class="form_text">Հարգելի դիմորդ տվյալ դասընթացին կարող եք գրանցվել հետևյալ դաշտերը լրացնելով:</p>
+    <form action="#">
+        <input type="text" class="dates" name="date1" placeholder="Enter your name.*"
+        [(ngModel)]="userName">
+        <input type="text" class="dates" name="date2" placeholder="Enter your surname.*"
+        [(ngModel)]="userSurname">
+        <input type="number" class="dates" name="date3" placeholder="Enter your age , > 17!.*" min="18"
+        max="50" [(ngModel)]="userAge">
+        <input type="text" class="dates" name="date5" placeholder="Enter your mobile number.*"
+        [(ngModel)]="userMobile">
+        <input type="email" class="dates" name="date4" placeholder="Enter your email,-not required."
+        [(ngModel)]="userEmail">
+        <a [routerLink]="['/lesson-page',storage.lesson]">
+            <input type="submit" class="dateButton" name="date6" value="Send Info" title="Sign Up"
+            (click)="showLessonPage()" (keyup.enter)="showLessonPage()">
+        </a>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+

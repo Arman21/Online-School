@@ -1,0 +1,187 @@
+.dialog_info {
+    margin-top:25% !important;
+    text-align:center;
+    width:60%;
+    margin-left:20%;
+}
+.boolean_block {
+    width:70%;
+    margin:15%;
+}
+.mainBlock {
+    position:relative;
+    width:100%;
+    border:5px solid #fff;
+    border-radius:23px;
+    padding:40px 30px;
+    animation-name:show-animation;
+    animation-duration:0.7s;
+}
+._logo {
+    margin-left:27.5%;
+    margin-bottom:70px;
+    width:45%;
+    height:373px;
+    cursor:pointer;
+    background-color:#fff;
+}
+.text_style {
+    font-size:16px;
+    text-align:center;
+}
+.lessonTime {
+    font-size:50px;
+    padding-top:30px;
+    margin-bottom:50px;
+}
+.iconDirect {
+    position:fixed;
+    bottom:55px;
+    right:50px;
+    z-index:5;
+    font-size:100px;
+    cursor:pointer;
+    color:#3A89BA;
+    display:none;
+    animation-name:animation2;
+    animation-duration:3s;
+}
+.router_link {
+    margin-left:39%;
+}
+.clickable {
+    border:2px solid #fff;
+    padding:13px 17px;
+    border-radius:15px;
+    color:#fff;
+    cursor:pointer;
+}
+.clickable:hover {
+    border:3px solid #000;
+}
+.clickable:active {
+    border:3px solid #fff;
+}
+@keyframes animation2 {
+    from {opacity:0.2;}
+    to {opacity:1;}
+}
+@keyframes show-animation {
+    from {transform:scale(0.2);}
+    to {transform:scale(1);}
+}
+@media screen and (max-width:1024px) {
+    .dialog_info {
+        margin-top:27% !important;
+    }
+    ._logo {
+        margin-left:20%;
+        width:60%;
+    }
+    .router_link {
+        margin-left:34%;
+    }
+}
+@media screen and (max-width:991px) {
+    .dialog_info {
+        margin-top:31% !important;
+    }
+}
+@media screen and (max-width:850px) {
+    ._logo {
+        margin-left:15%;
+        width:70%;
+    }
+    .router_link {
+        margin-left:32%;
+    }
+}
+@media screen and (max-width:768px) {
+    .dialog_info {
+        margin-top:38% !important;
+    }
+    .boolean_block {
+        width:80%;
+        margin:10%;
+    }
+    ._logo {
+        margin-left:10%;
+        width:80%;
+        height:400px;
+    }
+    .router_link {
+        margin-left:33%;
+    }
+}
+@media screen and (max-width:650px) {
+    .dialog_info {
+        margin-top:44% !important;
+    }
+    .router_link {
+        margin-left:31%;
+    }
+}
+@media screen and (max-width:600px) {
+    .mainBlock {
+        padding:30px 0;
+    }
+    ._logo {
+        margin-left:0;
+        width:100%;
+        height:450px;
+    }
+    .router_link {
+        margin-left:29%;
+    }
+}
+@media screen and (max-width:550px) {
+    .dialog_info {
+        margin-top:56% !important;
+    }
+    .router_link {
+        margin-left:30%;
+    }
+}
+@media screen and (max-width:500px) {
+    .dialog_info {
+        margin-top:62% !important;
+    }
+    .boolean_block {
+        width:100%;
+        margin:10% 0;
+    }
+    .router_link {
+        margin-left:30%;
+    }
+}
+@media screen and (max-width:414px) {
+    .dialog_info {
+        margin-top:68% !important;
+    }
+    .router_link {
+        margin-left:28%;
+    }
+}
+@media screen and (max-width:411px) {
+    .router_link {
+        margin-left:28%;
+    }
+}
+@media screen and (max-width:375px) {
+    .dialog_info {
+        margin-top:71% !important;
+    }
+    .router_link {
+        margin-left:26%;
+    }
+}
+@media screen and (max-width:360px) {
+    .router_link {
+        margin-left:26%;
+    }
+}
+@media screen and (max-width:320px) {
+    .router_link {
+        margin-left:22%;
+    }
+}

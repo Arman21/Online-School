@@ -1,0 +1,24 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline-style:none !important;
+    font-family:sans-serif;
+}
+html {
+    scroll-behavior:smooth;
+}
+body {
+    animation-name:animation1;
+    animation-duration:20s;
+    animation-delay:0;
+    animation-iteration-count:infinite;
+}
+@keyframes animation1 {
+    0% {background-color:rgba(226, 95, 7, 0.8);}
+    25% {background-color:rgba(238,46,245,0.7);}
+    50% {background-color:rgba(91, 164, 197, 0.9);}
+    75% {background-color:rgba(226, 95, 7, 0.8);}
+    100% {background-color:rgba(238,46,245,0.7);}
+}
+
